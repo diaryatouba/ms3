@@ -1,0 +1,13 @@
+type Etudiant {
+    id: ID!
+    prenom: String!
+    nom: String!
+    adresse: String
+    telephone: String
+}
+
+type Query {
+    etudiant(id: ID!): Etudiant
+    rechercheEtudiants(nom: String): [Etudiant]
+    decompteEtudiants: Int
+}
